@@ -30,11 +30,13 @@
 
     <script>
         var arrText=['IMRAN AHMAD','A MERN DEVELOPER','FORNT END DEVELOPER','NODE DEVELOPER','BACKEND DEVELOPER'];
+        var txtColor=['red','yellow','green','blue','orange'];
         var i=0;
         let txtchanger=()=>{
             
             var txt=document.querySelector('h1');
             txt.innerText=arrText[i];
+            txt.style.color=txtColor[i];
             i++;
             if(i==arrText.length){
                 i=0;
