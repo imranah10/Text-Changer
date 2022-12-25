@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Changer</title>
+    <style>
+        .heading{
+            border: 10px solid pink;
+            background: linear-gradient(40deg,rgb(224, 224, 64),rgb(39, 39, 141));
+            border-radius: 10px;
+            margin: 50px auto;
+            height: 100px;
+            width: 60%;
+        }
+        h1{
+            color: rgb(156, 9, 241);
+            text-align: center;
+            font-size: 2.5rem;
+        }
+    </style>
+</head>
+<body onload="txtchanger()">
+    <h2 style="color: crimson;font-size: 3rem;text-align: center;">TEXT CHANGER</h2>
+    <div class="heading">
+        <h1>Imran Ahmad</h1>
+    </div>
+    
+
+    <script>
+        var arrText=['IMRAN AHMAD','A MERN DEVELOPER','FORNT END DEVELOPER','NODE DEVELOPER','BACKEND DEVELOPER'];
+        var i=0;
+        let txtchanger=()=>{
+            
+            var txt=document.querySelector('h1');
+            txt.innerText=arrText[i];
+            i++;
+            if(i==arrText.length){
+                i=0;
+            }
+        }
+        setInterval(txtchanger,1500)
+    </script>
+</body>
+</html>
